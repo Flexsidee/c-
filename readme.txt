@@ -1,0 +1,1 @@
+This repositories is used to stores codes i wrote in C++ while learning currently in schoool
