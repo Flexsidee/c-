@@ -1,4 +1,4 @@
-#include <iostream>;
+#include <iostream>
 using namespace std;
 
 int main(){
@@ -19,19 +19,12 @@ int main(){
 		cin >> scores[i];
 	}
 	
-	//this loop is used to add up the sum of the scores the user input
-	for(i = 1; i <= courseLength; i++){
-		sum += scores[i];	
+	for(i = 1; i<= courseLength; i++){
+		sum += scores[i];
 	}
 	
-	average = sum / courseLength; //this is the average score of the student
-	
-	//this loop is used to display all the scores gotten from the user
-	cout << "\nThe scores of the student are :\t" ;
-	for(i = 1; i <= courseLength; i++){
-		cout << scores[i] << ", ";
-	}
-	
+	average = sum / courseLength;
+		
 	cout << "\nThe sum of the courses is\t" << sum << endl;
 	
 	cout << "\nThe average score of the student is \t" << average << endl;
@@ -43,10 +36,12 @@ int main(){
 		cout << "\nYour grade is B";
 	}else if ( average <= 59 && average >= 50){
 		cout << "\nYour grade is C";
-	}else if ( average <= 49 && average >= 40){
+	}else if ( average <= 49 && average >= 45){
 		cout << "\nYour grade is D";
+	}else if(average <= 44 && average >= 40){
+		cout << "\nYour grade is E";
 	}else{
-		cout << "\nYou failed";
+		cout << "\nYour grade is F";
 	}
 	
 	
