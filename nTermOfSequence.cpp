@@ -25,7 +25,7 @@ int main(){
 
     cout << "Enter the first number of the series ";
     cin >> firstTerm;
-
+n
     cout << "Enter the second number of the series ";
     cin >> secondTerm;
 
