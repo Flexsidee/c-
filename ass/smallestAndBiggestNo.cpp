@@ -1,34 +1,29 @@
-/*
-Name: Somade Daniel Oluwaseunfunmi
-Matric No: 21/8874
-Department: 200 Level Computer Science
-Week: 4-5
-Question (c): Write a C++ program to  find both the largest and smallest in a list of integers
-*/
-
+//program to find largest and smallest number
 #include <iostream>
 using namespace std;
 int main(){
-	int n1, n2, n3, smallest, largest;
-	cout<< "Enter the three numbers: \n";
-	cin >> n1 >> n2 >> n3;
-	smallest = n1;
-	largest = n2;
-	if(n2 < smallest){
-		smallest = n2;
-	}
-	if(n3 < smallest){
-		smallest = n3;
-	}
-	if(n3 > largest){
-		largest = n3;
-	}
-	if(n2 > largest){
-		largest = n2;
+	int i, n, smallest, largest;
+	cout << "Enter the amount of numbers: ";
+	cin >> n;
+	int list[n];
+	
+	for(i=0; i<n; i++){
+		cout << "Enter number " << i+1 << ": ";
+		cin >> list[i];
 	}
 	
-	cout<<"\nThe smallest number among ("<< n1 << ","<< n2 << ", "<< n3 << " )is :" <<smallest;
-	cout<<"\nThe largest number among ("<< n1 << ","<< n2 << ", "<< n3 << " )is  :" <<largest;
+	smallest = largest = list[0]; //setting the smallest and smallest number to the first item in the array
+	
+	for(i=1; i<=n; i++){
+		if(list[i] >largest){
+			largest = list[i];
+		}
+		if(list[i] < smallest){
+			smallest = list[i];
+		}
+	}
+	cout<<"\nThe smallest number among is = " <<smallest;
+	cout<<"\nThe largest number among is = " <<largest; 
 
 	return 0;
 }
